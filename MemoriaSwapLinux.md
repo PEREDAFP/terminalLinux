@@ -34,13 +34,13 @@ En esta sesión, los alumnos aprenderán a gestionar la memoria virtual en Linux
    swapon --show
    ```
 
-4. **Hacer el archivo swap permanente: (esto lo veremos con más detalle en la sesión de fstab)**
+4. **Hacer el archivo swap permanente:(Lo veremos con más detalle en sistema de archivos)**
    Añadir esta línea al archivo `/etc/fstab`:
    ```bash
    /swapfile none swap sw 0 0
    ```
 
-#### **Crear una partición `linux-swap` y configurarla: (previa instalación de un nuevo disco en la MV. Puedes realizarlo con gparted)**
+#### **Crear una partición `linux-swap` y configurarla: (Puedes realizarlo con gparted)**
 1. **Crear una partición con `fdisk`:**
    - Selecciona un disco con `sudo fdisk /dev/sdX` (reemplaza `X` con la unidad correspondiente).
    - Dentro de `fdisk`:
@@ -55,7 +55,7 @@ En esta sesión, los alumnos aprenderán a gestionar la memoria virtual en Linux
    sudo swapon /dev/sdX1
    ```
 
-3. **Verificar y hacer permanente:**
+3. **Verificar y hacer permanente:(La permanencia la estudiaremos en sistema de archivos)**
    - Verifica con:
      ```bash
      free -h
@@ -81,7 +81,13 @@ En esta sesión, los alumnos aprenderán a gestionar la memoria virtual en Linux
 
 ### **4. Ejercicios prácticos**
 #### **Ejercicio 1:** Crear un archivo de 512 MB como swap y activarlo temporalmente.  
-#### **Ejercicio 2:** Crear ulo veremos con más detalle en el tema de procesos y prioridades)** Configurar el archivo `/proc/sys/vm/swappiness` para cambiar la prioridad de uso de swap.
+#### **Ejercicio 2:** Crear una partición de 2 GB como `linux-swap` en un disco secundario y activarla.  
+#### **Ejercicio 3:** Desactivar un archivo o partición swap existente.  
+#### **Ejercicio 4:** Aumentar la memoria swap existente en 1 GB mediante un archivo adicional.  
+#### **Ejercicio 5:** Verificar el uso de memoria RAM y swap en un sistema con `free -h` y `vmstat`.  
+#### **Ejercicio 6:** Crear un archivo swap, activarlo y añadirlo al archivo `/etc/fstab` para que sea permanente.  
+#### **Ejercicio 7:** Configurar un sistema para que utilice una partición swap existente en un disco externo.  
+#### **Ejercicio 8:** Usar `top` para identificar procesos que están utilizando swap.  
 
 ---
 
@@ -154,25 +160,6 @@ vmstat
 top  # Busca la columna de swap
 ```
 
-#### **Solución Ejercicio 9:**
-1. Ejecuta un script que consume memoria y monitorea:
-   ```bash
-   while true; do malloc 1000000; done
-   ```
-2. Observa con:
-   ```bash
-   vmstat 1
-   free -h
-   ```
-
-#### **Solución Ejercicio 10:**
-1. Cambiar prioridad de uso de swap:
-   ```bash
-   echo 10 | sudo tee /proc/sys/vm/swappiness
-   ```
-2. Hacerlo permanente añadiendo a `/etc/sysctl.conf`:
-   ```plaintext
-   vm.swappiness=10
-   ```
 
 ---
+
