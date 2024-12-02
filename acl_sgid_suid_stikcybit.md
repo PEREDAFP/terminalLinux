@@ -1,4 +1,3 @@
-Claro, aquí tienes una explicación detallada de **ACLs**, **SGID**, **SUID** y **Sticky Bit**:
 
 ---
 
