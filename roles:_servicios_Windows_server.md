@@ -2,7 +2,7 @@
 
 ### 🎯 Objetivo de la charla:
 
-Entender qué son los **roles y servicios de rol** en Windows Server, cómo se instalan, y para qué sirve cada uno en la práctica. ¡Con ejemplos y consejos para elegir el correcto!
+Entender qué son los **roles y servicios de rol** en Windows Server, cómo se instalan, y para qué sirve cada uno en la práctica.
 
 ---
 
@@ -93,7 +93,3 @@ Install-WindowsFeature -Name AD-Domain-Services
 ### 🔹 8. Conclusión
 
 Entender y elegir correctamente los **roles** y **servicios de rol** es clave para que tu infraestructura funcione bien, sea segura y fácil de mantener.
-
----
-
-### 🔚 ¿Preguntas?
