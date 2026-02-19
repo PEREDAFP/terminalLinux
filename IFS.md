@@ -56,12 +56,12 @@ Esto es útil para manejar rutas en `PATH` u otros datos con separadores persona
 
 ```bash
 #!/bin/bash
-IFS=':'
 caminos="/usr/bin:/bin:/usr/local/bin"
 
-while read -r ruta; do
+while IFS= read -r ruta; do
     echo "Directorio: $ruta"
-done <<< "$caminos"
+done <<< "$(tr ':' '\n' <<< "$caminos")"
+
 ```
 
 🔹 **Explicación**:
