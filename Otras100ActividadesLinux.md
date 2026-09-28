@@ -241,13 +241,13 @@
 90. `chown usuario:usuario archivo1.txt && echo "Propietario del archivo cambiado"`
 
 91. `ls || echo "No se pudo listar los archivos" && echo "Listado de archivos exitoso"`
-92. `cp archivo1.txt archivo2.txt || echo "No se pudo copiar el archivo" && echo "Copia de archivo exitosa"`
-93. `mv archivo1.txt /tmp || echo "No se pudo mover el archivo" && echo "Movimiento de archivo exitoso"`
-94. `rm archivo1.txt || echo "No se pudo eliminar el archivo" && echo "Eliminación de archivo exitosa"`
-95. `cat archivo1.txt || echo "No se pudo mostrar el contenido del archivo" && echo "Contenido del archivo mostrado"`
-96. `grep "error" archivo1.txt || echo "No se encontró la palabra 'error'" && echo "Palabra 'error' encontrada"`
-97. `head archivo1.txt || echo "No se pudo mostrar el inicio del archivo" && echo "Inicio del archivo mostrado"`
-98. `tail archivo1.txt || echo "No se pudo mostrar el final del archivo" && echo "Final del archivo mostrado"`
-99. `chmod 755 archivo1.txt || echo "No se pudo cambiar los permisos del archivo" && echo "Permisos del archivo cambiados"`
-100. `chown usuario:usuario archivo1.txt || echo "No se pudo cambiar el propietario del archivo" && echo "Propietario del archivo cambiado"`
+92. `cp archivo1.txt archivo2.txt && echo "Copia de archivo exitosa"|| echo "No se pudo copiar el archivo" `
+93. `mv archivo1.txt /tmp && echo "Movimiento de archivo exitoso" || echo "No se pudo mover el archivo" `
+94. `rm archivo1.txt && echo "Eliminación de archivo exitosa" || echo "No se pudo eliminar el archivo" `
+95. `cat archivo1.txt  && echo "Contenido del archivo mostrado" || echo "No se pudo mostrar el contenido del archivo" `
+96. `grep "error" archivo1.txt && echo "Palabra 'error'  || echo "No se encontró la palabra 'error'"  encontrada"`
+97. `head archivo1.txt && echo "Inicio del archivo mostrado" || echo "No se pudo mostrar el inicio del archivo" `
+98. `tail archivo1.txt && echo "Final del archivo mostrado" || echo "No se pudo mostrar el final del archivo" `
+99. `chmod 755 archivo1.txt && echo "Permisos del archivo cambiados" || echo "No se pudo cambiar los permisos del archivo" `
+100. `chown usuario:usuario archivo1.txt && echo "Propietario del archivo cambiado" || echo "No se pudo cambiar el propietario del archivo" `
 
