@@ -31,3 +31,5 @@ UUID=12345678-90ab-cdef-1234-567890abcdef /mnt/data ext4 defaults,relatime 0 2
 ```
 
 Esto configura el montaje de una partición con un comportamiento optimizado para actualizar las marcas de acceso solo cuando sea necesario.
+
+Prueba a montar una partición con atime, relatime, noatime y strictatime. Crea un fichero llamado "control.txt" y añade dos líneas. Luego realiza un ```cat control.txt``` para a continuación realizar un ```stat control.txt``` Indica en qué montaje se ha modificado la fecha y hora de acceso al fichero.
