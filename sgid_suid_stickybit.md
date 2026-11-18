@@ -19,7 +19,7 @@ El **SUID** (Set User ID) es un permiso especial que se aplica a archivos ejecut
   #include <sys/types.h>
 
   int main() {
-      const char *directorio = "/home/madrid";
+      const char *directorio = "/home/madrid/nopuedorl";
 
       if (mkdir(directorio, 0755) == -1) {
           perror("Error al crear el directorio");
